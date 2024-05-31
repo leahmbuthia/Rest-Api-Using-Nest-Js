@@ -46,7 +46,7 @@ export class AuthService {
       },
     });
   
-    console.log('User found:', user);
+    // console.log('User found:', user);
   
     // if user does not exist throw exception
     if (!user) throw new ForbiddenException('Credentials incorrect');
@@ -56,7 +56,7 @@ export class AuthService {
   
     // if password incorrect throw exception
     if (!pwMatches) {
-      console.log('Password incorrect, throwing exception');
+      // console.log('Password incorrect, throwing exception');
       throw new ForbiddenException('Credentials incorrect');
     }
   
