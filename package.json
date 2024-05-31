@@ -6,7 +6,7 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "prisma:dev:deploy":"prisma migrate deploy",
+    "prisma:dev:deploy": "prisma migrate deploy",
     "db:dev:rm": "docker compose rm dev-db -f -v",
     "db:dev:up": "docker compose up -d",
     "db:dev:restart": "pnpm db:dev:rm && pnpm db:dev:up && sleep 1 && pnpm  prisma:dev:deploy",
@@ -31,6 +31,7 @@
     "argon2": "^0.40.3",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.1",
+    "nest-config": "^1.0.0",
     "reflect-metadata": "^0.2.0",
     "rxjs": "^7.8.1"
   },
