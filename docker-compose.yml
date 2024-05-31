@@ -8,13 +8,27 @@ services:
       POSTGRES_USER: postgres 
     image: postgres:13        
     networks:
-      customnetwork: null     
+      - customnetwork     
     ports:
       - mode: ingress
         target: 5432
         published: "5434"     
         protocol: tcp
+
+  test-db:
+    environment:
+      POSTGRES_DB: nest       
+      POSTGRES_PASSWORD: "123"
+      POSTGRES_USER: postgres 
+    image: postgres:13        
+    networks:
+      - customnetwork     
+    ports:
+      - mode: ingress
+        target: 5432
+        published: "5435"     
+        protocol: tcp
+
 networks:
   customnetwork:
     name: nestjs-api-tutorial_customnetwork
-
